@@ -1,0 +1,19 @@
+name: CommandCollection
+main: eu.valkyr.CommandCollection.CommandCollection
+version: 0.2
+commands:
+   clearexcept:
+      description: Leere das Inventar bis auf ein Item
+      usage: /clearexcept [Spieler] [Item]
+      permission: cc.clearexcept
+      permission-message: Du darfst das nicht!
+   setname:
+      description: Setze den Itemtitel mit Formattingcodes
+      usage: /setname [Titel]
+      permission: cc.setname
+      permission-message: Du darfst das nicht!
+   setlore:
+      description: Setze die Itemlore mit Formattingcodes
+      usage: /setname [Lore]
+      permission: cc.setlore
+      permission-message: Du darfst das nicht!
