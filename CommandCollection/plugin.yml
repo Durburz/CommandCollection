@@ -1,6 +1,6 @@
 name: CommandCollection
 main: eu.valkyr.CommandCollection.CommandCollection
-version: 0.2
+version: 0.3
 commands:
    clearexcept:
       description: Leere das Inventar bis auf ein Item

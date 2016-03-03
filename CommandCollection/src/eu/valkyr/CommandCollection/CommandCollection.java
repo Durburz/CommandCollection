@@ -58,7 +58,7 @@ public class CommandCollection extends JavaPlugin{
     			sender.sendMessage(ChatColor.RED + "Dieser Befehl kann nur von einem Spieler ausgeführt werden!");
     			return false;
     		} 
-    		else if (player.getItemInHand().getType().equals(Material.AIR)) {
+    		else if (player.getInventory().getItemInMainHand().getType().equals(Material.AIR)) {
     			sender.sendMessage(ChatColor.RED + "Dieser Befehl kann nur mit einem Item in der Hand ausgeführt werden!");
     			return false;
     		} 
@@ -68,11 +68,11 @@ public class CommandCollection extends JavaPlugin{
     			for (int i=1; i<args.length; i++) { 
     				name = name + " " + args[i].replace("\\&", "§");
     			}
-    			ItemStack item = player.getItemInHand();
+    			ItemStack item = player.getInventory().getItemInMainHand();
     			ItemMeta im = item.getItemMeta();
     			im.setDisplayName(name);
     			item.setItemMeta(im);
-    			player.setItemInHand(item);
+    			player.getInventory().setItemInMainHand(item);
     			return true;
     		}
     	}
@@ -88,7 +88,7 @@ public class CommandCollection extends JavaPlugin{
     			sender.sendMessage(ChatColor.RED + "Dieser Befehl kann nur von einem Spieler ausgeführt werden!");
     			return false;
     		} 
-    		else if (player.getItemInHand().getType().equals(Material.AIR)) {
+    		else if (player.getInventory().getItemInMainHand().getType().equals(Material.AIR)) {
     			sender.sendMessage(ChatColor.RED + "Dieser Befehl kann nur mit einem Item in der Hand ausgeführt werden!");
     			return false;
     		} 
@@ -99,11 +99,11 @@ public class CommandCollection extends JavaPlugin{
     				text = text + " " + args[i].replace("\\&", "§");
     			}
     			List<String> lore = Arrays.asList(text.split("\\s*\\\\n\\s*"));
-    			ItemStack item = player.getItemInHand();
+    			ItemStack item = player.getInventory().getItemInMainHand();
     			ItemMeta im = item.getItemMeta();
     			im.setLore(lore);
     			item.setItemMeta(im);
-    			player.setItemInHand(item);
+    			player.getInventory().setItemInMainHand(item);
     			return true;
     		}
     	}
